@@ -1,4 +1,4 @@
-import { Request, Response } from "express"
+import { Request, Response } from "express";
 
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
@@ -7,9 +7,9 @@ class CreateCategoryController {
   handle(req: Request, res: Response): Response {
     const { name, description } = req.body;
 
-    this.createCategoryUseCase.excute({ name, description })
-    return res.status(201).send()
+    this.createCategoryUseCase.excute({ name, description });
+    return res.status(201).send();
   }
 }
 
-export { CreateCategoryController }
+export { CreateCategoryController };
