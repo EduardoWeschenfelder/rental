@@ -47,7 +47,6 @@ class ImportCategoryUseCase {
       const { name, description } = category;
 
       const existsCategory = await this.categoriesRepository.findByName(name);
-      console.log(file);
 
       if (!existsCategory) {
         await this.categoriesRepository.create({ name, description });
